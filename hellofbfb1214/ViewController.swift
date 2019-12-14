@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import Firebase
 
 class ViewController: UIViewController,LoginButtonDelegate {
 
@@ -32,7 +33,23 @@ class ViewController: UIViewController,LoginButtonDelegate {
     
     //MARK:FBLoginDelegate
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        print("Login 成功了")
+        if let error = error  {
+            showAlert("error:\(error.localizedDescription)")
+            return
+        }
+        
+        if let accessToken = AccessToken.current{
+            let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+            Auth.auth().signIn(with: credential) { (result, error) in
+                if let error = error{
+                    self.showAlert("error:\(error.localizedDescription)")
+                    return
+                }
+            }
+        }
+        
+        
+        
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
@@ -40,3 +57,11 @@ class ViewController: UIViewController,LoginButtonDelegate {
     }
 }
 
+
+extension UIViewController{
+    func showAlert(_ msg:String){
+        let alert = UIAlertController(title: "注意", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "我知道了", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
