@@ -14,6 +14,7 @@
 		BAFE0C8423A4CB0E0033C39A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFE0C8223A4CB0E0033C39A /* Main.storyboard */; };
 		BAFE0C8623A4CB100033C39A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFE0C8523A4CB100033C39A /* Assets.xcassets */; };
 		BAFE0C8923A4CB100033C39A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFE0C8723A4CB100033C39A /* LaunchScreen.storyboard */; };
+		BAFE0C9123A4DB410033C39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAFE0C9023A4DB410033C39A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BAFE0C8523A4CB100033C39A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAFE0C8823A4CB100033C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAFE0C8A23A4CB100033C39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFE0C9023A4DB410033C39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D12F02E6F0F10DB67B83A5B6 /* Pods-hellofbfb1214.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hellofbfb1214.release.xcconfig"; path = "Target Support Files/Pods-hellofbfb1214/Pods-hellofbfb1214.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				BAFE0C7C23A4CB0E0033C39A /* AppDelegate.swift */,
+				BAFE0C9023A4DB410033C39A /* GoogleService-Info.plist */,
 				BAFE0C7E23A4CB0E0033C39A /* SceneDelegate.swift */,
 				BAFE0C8023A4CB0E0033C39A /* ViewController.swift */,
 				BAFE0C8223A4CB0E0033C39A /* Main.storyboard */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFE0C8923A4CB100033C39A /* LaunchScreen.storyboard in Resources */,
+				BAFE0C9123A4DB410033C39A /* GoogleService-Info.plist in Resources */,
 				BAFE0C8623A4CB100033C39A /* Assets.xcassets in Resources */,
 				BAFE0C8423A4CB0E0033C39A /* Main.storyboard in Resources */,
 			);

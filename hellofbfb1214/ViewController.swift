@@ -9,13 +9,16 @@
 import UIKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,LoginButtonDelegate {
+
+    
 
     @IBOutlet weak var fbLoginButton: FBLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
-
+        fbLoginButton.delegate = self
         
     }
 
@@ -26,5 +29,14 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    //MARK:FBLoginDelegate
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        print("Login 成功了")
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("Logout 成功了")
+    }
 }
 
