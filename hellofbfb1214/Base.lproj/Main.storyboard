@@ -15,13 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-OD-ch0" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="116" y="56" width="167" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-OD-ch0" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="100" y="44" width="175" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qKO-Kf-vGp"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1N-K9-TdX">
+                                <rect key="frame" x="134" y="158" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check FB Login"/>
+                                <connections>
+                                    <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ba9-3m-6wm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9ZQ-OD-ch0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="gNw-xp-We1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ZQ-OD-ch0" secondAttribute="trailing" constant="100" id="gYj-sW-8Gt"/>
+                            <constraint firstItem="9ZQ-OD-ch0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="vnp-Ya-gG9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
